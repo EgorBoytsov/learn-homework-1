@@ -17,13 +17,13 @@
 
 def string(first_str, second_str):
     if type(first_str) != str or type(second_str) != str:
-        return '0'
+        return 'Это не строка, введите число'
     if first_str == second_str:
-        return '1'
+        return 'Cтроки равны по длинне'
     if len(first_str) > len(second_str) and second_str != 'learn':
-        return '2'
+        return 'Первая строка длиннее и не равна learn'
     if first_str != second_str and second_str == 'learn':
-        return '3'
+        return 'строки по длинне не равны, но втрорая равна learn'
 
 
 if __name__ == "__main__":

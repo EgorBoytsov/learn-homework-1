@@ -29,7 +29,7 @@ def ask_user(answers_dict):
     while True:
         user_say = str(input('Введите свой вопрос :\n')).capitalize()
 
-        if user_say in questions_and_answers.keys():
+        if user_say in questions_and_answers:
             print(questions_and_answers[user_say])
             if questions_and_answers[user_say] == 'Пока':
                 break
