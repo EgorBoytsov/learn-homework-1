@@ -12,16 +12,29 @@
 
     Пользователь: Что делаешь?
     Программа: Программирую
-    
+
 """
 
 questions_and_answers = {}
 
 def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+    questions_and_answers = {
+        "Как дела?": "Хорошо!",
+        "Что делаешь?": "Программирую",
+        "Как здоровье?": "Здорово",
+        "Сложно программировать?": "Не спрашивай",
+        "Хорошей учебы!": "Пока"
+    }
+
+    while True:
+        user_say = str(input('Введите свой вопрос :\n')).capitalize()
+
+        if user_say in questions_and_answers:
+            print(questions_and_answers[user_say])
+            if questions_and_answers[user_say] == 'Пока':
+                break
+        else:
+            print('Не могу ответить на твой вопрос!')
+
 if __name__ == "__main__":
     ask_user(questions_and_answers)
